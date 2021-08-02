@@ -1,0 +1,26 @@
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="Calculate" class="btn btn-primary"/></form>
+
+    {% if category %}
+    <div>
+        BMI: {{result}}
+        <div class="{{color}}">{{category}}</div>
+    </div>
+    <div>
+        <a href="{% url 'user:send_suggestion_email' id %}" class="btn btn-primary">Send suggestions</a>
+    </div>
+
+    {% endif %}
+</form>
+
+<style>
+    .Orange{
+        color: orange;
+    }
+
+    .Normal{
+        color: green;
+    }
+</style>

@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            {{title}}
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    </head>
+    <body>
+        {% block navbar %}
+        {% endblock navbar %}
+        {% block content %}
+            <p>This is a base file.</p>
+        {% endblock content %}
+    </body>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</html>

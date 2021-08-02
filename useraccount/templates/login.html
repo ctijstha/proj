@@ -1,0 +1,9 @@
+<form method="POST">
+    {% csrf_token %}
+    {% for message in messsages %}
+        {{message}}
+    {% endfor %}
+    {{ form.as_p }}
+    <input type="submit" value="Log In" name="login"/>
+    <a href="/user/register">Register</a>
+</form>

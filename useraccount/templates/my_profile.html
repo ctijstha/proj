@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+    {% include 'components/navbar.html' %}
+{% endblock navbar %}
+{% block content %}
+
+    <h1>My Profile</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Action</th> 
+        </tr>
+        <tr>
+            <td>{{profile.contact}}</td></br>
+            <td>{{profile.email}}</td>
+            
+
+            <td>
+                <a class="btn btn-success" href="{% url 'user:edit_profile' %}">Edit</a>
+            </td>
+        </tr>
+
+    </table>
+{% endblock content %}
